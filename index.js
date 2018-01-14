@@ -62,7 +62,7 @@ function parseEd2kLink(url) {
     throw new Error('ed2kLink.length must be integer');
   link.length = parseInt(baseParts[1]);
   
-  if (!baseParts[2].match(/^[0-9A-F]{32}$/))
+  if (!baseParts[2].match(/^[0-9A-Fa-f]{32}$/))
     throw new Error('ed2k hash must be hex string with 32 length');
   link.ed2k = baseParts[2];
 
